@@ -1,0 +1,11 @@
+FROM postgres:9.6.3-alpine
+ENV POSTGRES_USER='mortal2017'  
+ENV POSTGRES_PASSWORD='prn335'  
+ENV POSTGRES_DB='posts'  ​
+EXPOSE 5432​
+entrypoint:
+-payara41/bin/asadmin
+-start-domain
+- -v
+
+CMD [postgres]
